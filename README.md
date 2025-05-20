@@ -1,1 +1,4 @@
-# do-it-later
+# Tasktory
+---
+
+Tasktory is a simple task manager
