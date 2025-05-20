@@ -1,0 +1,145 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.Register">
+
+    <RelativeLayout
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgView_signup_banner"
+            android:layout_width="389dp"
+            android:layout_height="190dp"
+            app:srcCompat="@drawable/signup_banner" />
+
+        <TextView
+            android:id="@+id/register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgView_signup_banner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:textStyle="bold"
+            android:text="ĐĂNG KÝ"
+            android:textColor="@color/lavender"
+            android:textSize="30sp" />
+
+        <!-- Ô nhập user -->
+        <ImageView
+            android:id="@+id/icon_username_login"
+            android:layout_width="28dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/register_title"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/ic_personal" />
+
+        <EditText
+            android:id="@+id/edit_username_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/register_title"
+            android:layout_toEndOf="@id/icon_username_login"
+            android:layout_marginTop="32dp"
+            android:hint="Tên tài khoản" />
+
+        <!-- Ô nhập email -->
+        <ImageView
+            android:id="@+id/icon_email_register"
+            android:layout_width="28dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/icon_username_login"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/ic_email" />
+
+        <EditText
+            android:id="@+id/edit_email_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edit_username_register"
+            android:layout_toEndOf="@id/icon_email_register"
+            android:layout_marginTop="16dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <!-- Ô nhập pass -->
+        <ImageView
+            android:id="@+id/icon_username_password"
+            android:layout_width="28dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/icon_email_register"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/baseline_lock_24" />
+
+        <EditText
+            android:id="@+id/edit_password_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edit_email_register"
+            android:layout_toEndOf="@+id/icon_username_password"
+            android:layout_marginTop="16dp"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword" />
+
+        <!-- Ô repass -->
+        <ImageView
+            android:id="@+id/icon_repass"
+            android:layout_width="28dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/icon_username_password"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/baseline_lock_24" />
+
+        <EditText
+            android:id="@+id/edit_repassword_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edit_password_register"
+            android:layout_toEndOf="@id/icon_repass"
+            android:layout_marginTop="16dp"
+            android:hint="Nhập lại mật khẩu"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btn_register_register"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_repassword_register"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#7F5AF0"
+            android:text="Đăng ký"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/login_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_register_register"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Đã có tài khoản? Đăng nhập"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+</ScrollView>

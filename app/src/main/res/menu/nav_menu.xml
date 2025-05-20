@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_habits"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Habit Tracker" />
+
+        <item
+            android:id="@+id/nav_challenges"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Challenge" />
+
+        <item
+            android:id="@+id/nav_pomodoro"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Pomodoro Timer" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_password"
+            android:title= "Đổi mật khẩu"/>
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/baseline_share_24"
+            android:title="Chia sẻ" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/baseline_info_24"
+            android:title="Thông tin ứng dụng" />
+    </group>
+    <item android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Đăng xuất" />
+        </menu>
+
+    </item>
+
+</menu>

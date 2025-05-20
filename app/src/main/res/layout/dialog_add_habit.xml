@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextHabitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tên"
+                android:inputType="text"
+                android:maxLines="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tần số"
+                android:textStyle="bold" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:tabMode="fixed">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HÀNG NGÀY" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HÀNG TUẦN" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KHOẢNG THỜI GIAN" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <!-- Daily Layout -->
+            <LinearLayout
+                android:id="@+id/dailyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/baseline_repeat_24"
+                    app:tint="#2196F3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Thực hiện mỗi ngày"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Tự động lựa chọn tất cả các ngày trong tuần"
+                    android:textSize="12sp"
+                    android:textColor="#757575" />
+            </LinearLayout>
+
+            <!-- Weekly Layout -->
+            <LinearLayout
+                android:id="@+id/weeklyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:fadeScrollbars="true">
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ToggleButton
+                            android:id="@+id/toggleMonday"
+                            style="@style/DayToggleButton"
+                            android:layout_marginEnd="8dp"
+                            android:textOff="T2"
+                            android:textOn="T2" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleTuesday"
+                            style="@style/DayToggleButton"
+                            android:layout_marginEnd="8dp"
+                            android:textOff="T3"
+                            android:textOn="T3" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleWednesday"
+                            style="@style/DayToggleButton"
+                            android:layout_marginEnd="8dp"
+                            android:textOff="T4"
+                            android:textOn="T4" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleThursday"
+                            style="@style/DayToggleButton"
+                            android:layout_marginEnd="8dp"
+                            android:textOff="T5"
+                            android:textOn="T5" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleFriday"
+                            style="@style/DayToggleButton"
+                            android:layout_marginEnd="8dp"
+                            android:textOff="T6"
+                            android:textOn="T6" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleSaturday"
+                            style="@style/DayToggleButton"
+                            android:layout_marginEnd="8dp"
+                            android:textOff="T7"
+                            android:textOn="T7" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleSunday"
+                            style="@style/DayToggleButton"
+                            android:textOff="CN"
+                            android:textOn="CN" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="ngày mỗi tuần" />
+
+            </LinearLayout>
+
+            <!-- Interval Layout -->
+            <LinearLayout
+                android:id="@+id/intervalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mỗi" />
+
+                <NumberPicker
+                    android:id="@+id/intervalDaysPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center"
+                    android:descendantFocusability="blocksDescendants"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ngày" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Mục tiêu"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAllDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đạt được tất cả" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ngày bắt đầu"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:hint="Chọn ngày bắt đầu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Số ngày mục tiêu"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewTargetDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:text="Mãi mãi"
+                android:drawableEnd="@android:drawable/arrow_down_float" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nhắc nhở"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:text="Không nhắc nhở"
+                android:drawableEnd="@android:drawable/ic_menu_recent_history" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Số lần trong ngày"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <NumberPicker
+                    android:id="@+id/numberPickerTimesPerDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="lần" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ghi chú"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thêm ghi chú..."
+                android:gravity="top"
+                android:minLines="2"
+                android:maxLines="4" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
