@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#B38687E7" /> <!-- #F2 là 95% opacity, E6E6FA là mã màu lavender -->
+    <corners android:radius="16dp" /> <!-- Điều chỉnh radius theo ý bạn -->
+</shape>

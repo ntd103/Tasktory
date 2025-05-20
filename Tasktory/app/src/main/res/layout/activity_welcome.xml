@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".activity.Welcome">
+
+    <ImageView
+        android:id="@+id/imgView_logo"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/app_icon2"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tasktory"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:textColor="@color/lavender"
+        android:gravity="center"
+        android:paddingHorizontal="32dp" />
+
+    <TextView
+        android:id="@+id/txt_huongdan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập tài khoản của bạn hoặc\n tạo mới để tiếp tục"
+        android:textSize="16sp"
+        android:textColor="#BBBBBB"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="32dp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#7F5AF0"
+        android:text="ĐĂNG NHẬP"
+        android:textColor="#FFFFFF"
+        android:strokeWidth="2.0"
+        android:strokeColor="#7F5AF0"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/create_account_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#7F5AF0"
+        android:strokeWidth="2.0"
+        android:strokeColor="#7F5AF0"
+        android:text="ĐĂNG KÝ"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

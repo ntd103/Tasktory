@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/ic_home"
+        android:title="Trang chủ" />
+
+    <item
+        android:id="@+id/bottom_category"
+        android:icon="@drawable/baseline_menu_24"
+        android:title="Danh mục" />
+
+    <item
+        android:enabled="true"
+        android:title="" />
+
+    <item
+        android:id="@+id/bottom_calendar"
+        android:icon="@drawable/baseline_calendar_month_24"
+        android:title="Lịch" />
+
+    <item
+        android:id="@+id/bottom_profile"
+        android:icon="@drawable/baseline_person_outline_24"
+        android:title="Cá nhân" />
+
+</menu>
